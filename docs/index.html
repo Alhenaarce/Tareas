@@ -1,66 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <title>Currículum Vitae de Alhena Arce</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <meta charset="UTF-8">
-    <meta name="author" content="Alhena Arce">
-    <meta name="description" content="Este es el currículum vitae digital de Alhena Arce, donde podrás encontrar información sobre su formación, experiencia y habilidades.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript" src="mi-script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Interactiva Giratoria</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    <header>
-        <img src="fotocurriculum.jpeg" alt="Foto de Alhena Arce" width="150" style="border-radius: 0;">
-        <h1>Alhena Arce</h1>
-        <p class="contact-info">+569 58644832 | alhena.arce@uc.cl | Santiago, Chile</p>
-    </header>
-    
-    <section>
-        <h2>Perfil</h2>
-        <p>Voy en tercer año de periodismo en la Pontificia Universidad Católica. 
-          Hice mi practica interna en la radio UC en 2023, donde fui columnista del programa "Módulo 2" en donde hablaba sobre los estrenos del mundo del cine y las series.
-          También fui reportera durante el trasnoche para la elecciones de la FEUC 2024.
-          </p>
-  
-      <p>
-         Aparte de estudiar, también he trabajado durante el verano. El año pasado fui promotora de una peluquería en donde tenía que tratar de aumentar la cantidad de clientes entregandoles folletos informativos y hablandoles sobre la peluquería.
-         Además, este año trabajé como promotora del banco BCI en el Mall Paque Arauco. 
+  <!-- Primera sección: Pizza giratoria -->
+  <div class="contenedor-pizza">
+    <svg class="pizza" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fondo de masa -->
+      <circle class="masa" cx="100" cy="100" r="95" />
+      <g id="porciones">
+        <!-- Porciones de la pizza -->
+        <path class="porcion" d="M100,100 L100,10 A90,90 0 0,1 180,100 Z" />
+        <path class="porcion" d="M100,100 L180,100 A90,90 0 0,1 100,190 Z" />
+        <path class="porcion" d="M100,100 L100,190 A90,90 0 0,1 20,100 Z" />
+        <path class="porcion" d="M100,100 L20,100 A90,90 0 0,1 100,10 Z" />
+      </g>
+      <!-- Pepperonis -->
+      <g id="pepperonis">
+        <circle class="pepperoni" cx="135" cy="50" r="8" />
+        <circle class="pepperoni" cx="115" cy="80" r="8" />
+        <circle class="pepperoni" cx="160" cy="80" r="8" />
+        <circle class="pepperoni" cx="125" cy="150" r="8" />
+        <circle class="pepperoni" cx="130" cy="120" r="8" />
+        <circle class="pepperoni" cx="160" cy="125" r="8" />
+        <circle class="pepperoni" cx="40" cy="120" r="8" />
+        <circle class="pepperoni" cx="80" cy="130" r="8" />
+        <circle class="pepperoni" cx="80" cy="160" r="8" />
+        <circle class="pepperoni" cx="70" cy="40" r="8" />
+        <circle class="pepperoni" cx="80" cy="70" r="8" />
+        <circle class="pepperoni" cx="50" cy="85" r="8" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Segunda sección: Contexto -->
+  <section class="seccion-contexto">
+    <div class="contenido-seccion">
+      <h1 class="titulo-seccion">La <span>pizza</span> llegó para quedarse</h1>
+      <p class="texto-autores">
+        Por Alhena Arce, Katherine Bobadilla y Rocío Villalón.
+      <p class="texto-introducción">
+        El mercado de pizza en Chile llegó para quedarse, y es que, si bien lleva años en el territorio, este aumentó formidablemente en los últimos años. De acuerdo con el informe de Mercado de Pizzas en Chile, este negocio ha tenido un alza de 105% en 2024. En este sentido, la pizza se ha transformado en una de las comidas predilectas por los chilenos, siendo uno de los alimentos favoritos a la hora de solicitar un delivery. Según el informe, se estima que este mercado puede tener una tasa de crecimiento anual compuesta del 7,60% entre 2024 y 2032.
+      </p>
+    </div>
+  </section>
+
+   <!-- Tercera sección: Grid con dos cuadros de texto -->
+   <section class="seccion-grid">
+    <div class="parent">
+      <div class="cuadro-texto">
+        <h2>N° total de empresas x Año</h2>
+        <p> <img src="numero de empresas x año.png" alt="gráfico1" class="grafico1">
+      </div>
+      <div class="cuadro-texto">
+        <h2>Total de Ventas Anuales en UF x Año</h2>
+        <p> <img src="año x total ventas anuales en UF.png" alt="grafico2" class="grafico2">
+      </div>
+      <div class="cuadro-texto-central">
+        <h2>Cadenas x región</h2>
+        <p> <img src="cadenas x nacional.png" alt="grafico3" class="grafico3">
+        <p class="texto-explicacióngráficos"></p>
+            El panorama gastronómico chileno cambió: desde 2005, el número de empresas dedicadas a la comida y los restaurantes ha ido creciendo. 
+            Según los datos del Servicio de Impuestos Internos (SII), este sector ha duplicado su tamaño en menos de 20 años. Esta situación ha sifo impulsada por el creciente apetito de los chilenos y chilenas por explorar nuevos sabores y experiencias culinarias que van de la mano con la gran diversidad de formas actuales en las que se puede pedir comida. 
+            <br> <br />
+            Pero no todo ha sido sencillo. Durante la pandemia por COVID-19 en 2020, el mercado de comidas enfrentó su mayor desafío; superar las barreras físicas impuestas para el resguardo de la salud de las personas, es decir, enfrentar el cierre de locales, la baja de personal y la imposibilidad de abrir más locales. El año 2020 marcó un punto de inflexión en el tptañ de vemntas anuales en UF obtenidas por las empresas, tal como se evidencia en el gráfico de la derecha. Sin embargo, la industria se tambaleó, pero, no cayó.
+            <br> <br />  
+            Como un ave Fénix, en el año 2022, la industria no sólo se recuperó, sino que alcanzó un nivel récord, confirmando que este sector gastronómico es uno de los más resilientes y dinámicos de la economía chilena. Esto evidencia cómo la pizza ha trascendido su origen gastronómico para convertirse en un fenómeno social, conectando a comunidades y generando tendencias que marcan la pauta en el mercado global.
         </p>
-    </section>
-    
-    <section>
-        <h2>Educación</h2>
-        <h3>Estudiante de Periodismo - Pontificia Universidad Católica de Chile</h3>
-        <li><b>Educación Básica y Media:</b> Colegio Mayor de Peñalolén </li>
-        <li><b>Educación Superior:</b> Estudiante de 3er año de Comunicaciones, Periodismo/ Pontificia Universidad Católica de Chile (2022-Aún cursando)</li>
-    </section>
-    
-    <section>
-        <h2>Experiencia Profesional</h2>
-        <h3>Radio UC</h3>
-        <p>2023 - Actualidad</p>
-        <ul>
-            <li>Producción de contenidos radiales.</li>
-            <li>Gestión de entrevistas y programas.</li>
-            <li>Community manager de empresa en Instagram</li>
-            <p>
-            <a href="https://www.instagram.com/artiko_chile/?hl=es-la">Instagram de la empresa Artiko la cual soy encargada de manejar las redes sociales.</a>
-            </p>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Habilidades</h2>
-        <ul>
-            <li>Redacción y edición de textos.</li>
-            <li>Manejo avanzado de herramientas digitales y audiovisuales.</li>
-            <li>Trabajo en equipo y comunicación interpersonal.</li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Alhena Arce. Todos los derechos reservados.</p>
-    </footer>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nueva sección: La preferencia de los chilenos -->
+  <section class="seccion-preferencia">
+    <div class="contenido-preferencia">
+      <h2 class="titulo-preferencia">La preferencia de los chilenos</h2>
+      <p> <img src="la preferencia de los chilenos.png" alt="podio" class="podio">
+      <p class="texto-preferencia">
+        En Chile, la pizza se ha convertido en uno de los alimentos más populares, con una amplia gama de sabores que reflejan la diversidad culinaria
+        del país. Desde las tradicionales pizzas italianas hasta versiones más creativas que incluyen ingredientes locales como aceitunas, longaniza y
+        ají, la pizza se ha adaptado al paladar chileno de maneras únicas. Esta sección explora cómo los chilenos eligen y disfrutan sus pizzas, y qué
+        tendencias emergen en el mercado.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Nueva sección: Texto a la izquierda e imagen a la derecha -->
+<section class="seccion-texto-imagen">
+    <div class="contenedor-texto-imagen">
+      <div class="texto-lado-izquierdo">
+        <h2>Rating x cadenas</h2>
+        <p>
+          El gráfico refleja las calificaciones promedio de las principales cadenas de pizza en Chile, con Papa John's liderando con un rating de 4.6, seguido de Melt con 4.5. Varias cadenas, como Little Caesars, Pizza Hut, Milano's Pizza, Waldo's y Telepizza, comparten una calificación de 4.4, mientras que Lovdo les sigue de cerca con 4.3. PizzaPizza obtiene un 3.9, y Domino's Pizza cierra el listado con 3.7, siendo la menos valorada. 
+          <br> <br />
+          Estas puntuaciones reflejan las preferencias y percepciones de calidad de los consumidores hacia las distintas marcas presentes en el país.
+        </p>
+      </div>
+      <div class="imagen-lado-derecho">
+        <img src="rating x cadenas.png" alt="grafico-rating-por-cadenas" class="grafico-rating-por-cadenas">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nueva sección: Imagen a la izquierda y texto a la derecha -->
+<section class="seccion-imagen-texto">
+    <div class="contenedor-imagen-texto">
+      <div class="imagen-lado-izquierdo">
+        <img src="ruta-de-tu-imagen.jpg" alt="Pizza servida en la mesa">
+      </div>
+      <div class="texto-lado-derecho">
+        <h2>Cantidad de locales de pizza en la Región Metropolitana</h2>
+        <p>
+          Si bien hay un crecimiento general de esta industria gastronómica, el auge de la pizza, es un microcosmos de esta tendencia. En un mar de opciones, las cadenas de pizzerías no sólo han sobrevivido a las adversidades, también han florecido, demostrando que, a veces, lo simple puede ser lo más efectivo.
+          <br> <br />
+          En la Región Metropolitana esta preparación italiana ha conquistado el corazón de los chilenos, logrando que cadenas de pizzas como Papa John´s lideren el mercado con 166 locales a lo largo del país y específicamente en la RM cuenta con 87 locales distribuidos en diversas comunas del territorio. 
+          El gráfico realizado a partir de datos de la empresa privada Gregario respecto a este mercado evidencia la cantidad y diversidad de locales de pizzas que se distribuyen a lo laargo de la región. La concentración de las pizzerías de grandes cadenas se encuentra en la metrópolis; una región marcada por una gran densidad poblacional.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nueva sección: Texto a la izquierda e imagen a la derecha -->
+<section class="seccion-texto-imagen">
+    <div class="contenedor-texto-imagen">
+      <div class="texto-lado-izquierdo">
+        <h2>Explorando el gusto chileno</h2>
+        <p>
+          Las cadenas de pizzas han sabido adaptarse a través de la implementación de estrategias como delivery rápido, promociones constantes y con un enfoque en sabores que combinan lo tradicional con lo local. De acuerdo con información de FoodService, las cadenas de pizzerías sólo representan el 30% de los locales de pizzas en el país, es decir, hay un gran número de restaurantes, locales artesanales o de barrio que también producen y comercializan este tipo de alimentos. 
+          <br> <br />
+Para poder entender las preferencias de las y los consumidores chilenos, podemos analizar sus evaluaciones para este tipo de servicios. En el gráfico se evidencia por comunas de la Región Metropolitana la evaluación a las 10 cadenas de pizzerías que se encuentran en el territorio. Para ello, se realizó una suma de los reviews de cadena de pizzería por comuna, lo que podemos entender como los comentarios u opiniones de cada local de pizzería en una comuna determinada.  
+<br> <br />
+A partir de un promedio de los ratings de cada cadena, en una escala de 1.0 a 5.0 puntos, donde 1.0 es la nota más baja y 5.0 la nota más alta, logramos determinar, de forma general, que la pizza es un alimento muy bien evaluado de forma transversal. Sin embargo, los lugares en los que se presenta una mejor evaluación son aquellos con gran densidad poblacional, que a su vez también presentan más locales de pizzerías como hemos visualizado en otros gráficos de la página web. 
+<br> <br />
+Las evaluaciones ratifican que cadenas que llevan más trayectoria en el país, tales como Papa John´s, Telepizza y Pizza Hut han sabido mantenerse en el tiempo, las últimas mencionadas con ratings moderados que les han permitido continuar en la competencia.  
+
+Por otro lado, estas evaluaciones evidencian que pizzerías relativamente nuevas como Melt Pizza y Little Caesars se han convertidos en algunas de las cadenas mejor evaluadas, superando a pizzerías que llevan más de una década en el país.
+        </p>
+      </div>
+      <div class="imagen-lado-derecho">
+        <img src="rating x cadenas x rm (tetrix).png" alt="tetrix" class="tetrix">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nueva sección: Los protagonistas -->
+<section class="seccion-protagonistas">
+    <h2>Los protagonistas (cadenas de pizzerías)</h2>
+    <div class="protagonista">
+      <img src="papajhons_logo-removebg-preview.png" alt="Papa-John´s" class="Papa-John´s">
+      <p>Fue en el año 2010, cuando la cadena de pizzas Papa John´s llegó a nuestro país con dos locales en las comunas de La Dehesa y Vitacura. Para ese entonces, este local era la tercera mayor cadena de pizzas de Estados Unidos. Hoy es una de las principales cadenas de pizzas en nuestro país y la mejor evaluada en base a ratings. En 2010, el plan inicial de esta mega cadena era abrir, a 2015, 40 locales en Chile y, de acuerdo con La Tercera, captar al menos un 25% del mercado local. Actualmente, en base a datos de Gregario, son 166 locales a lo largo del país y en la Región Metropolitana esta alcanza 4,4 puntos de rating, siendo 5,0 el puntaje máximo.
+        <br> <br />
+        <img src="rating papa johns regiones.png" alt="Papa-John´s-regiones" class="Papa-John´s-regiones">
+
+      <img src="dominos-pizza.png" alt="dominos-pizza" class="dominos-pizza">
+      <p>Caso contrario ocurre con Domino´s Pizza. Esta cadena tuvo su primer local en la calle Agustinas 1016, comuna de Santiago, convirtiéndose en el local más emblemático de la cadena de comida. En 2019, Domino´s Pizza contaba con 42 locales en Chile y, en ese mismo año, Russell Weiner, presidente para las Américas de Domino´s Pizza señaló que la cadena esperaba sumar 110 locales del 2019 hasta el 2024. Sin embargo, actualmente, la cadena cuenta con 57 locales en todo el país. Respecto a Chile, señaló que la marca en 2019 ocupaba la tercera posición detrás de Papa John´s y Telepizza-Pizza Hut. Hoy en día, esta cadena ni siquiera figura dentro de las preferidas por los consumidores en Chile, su rating es de 3.7 puntos. </p>
+    </div>
+    <div class="protagonista">
+      <img src="logo melt.webp" alt="melt" class="melt">
+      <p>Al igual que Papa John's, Melt Pizzas es otra cadena destacada a nivel nacional. Fundada en Chile, Melt abrió sus puertas en 2018 para el mercado local y, en la actualidad, cuenta con 44 locales en diversas comunas y regiones del país, como la Región Metropolitana, Región de Valparaíso y Región de O’Higgins. En solo seis años, la cadena ha experimentado un crecimiento exponencial, expandiéndose rápidamente a lo largo del territorio nacional. Actualmente, Melt se encuentra entre los locales de pizza mejor evaluados, con un rating de 4,6. </p>
+    </div>
+  </section>  
+
+  <!-- Nueva sección: Top 5 comunas de la Región Metropolitana -->
+<section class="seccion-top5">
+    <h2>Las 5 comunas que se la juegan por la pizza</h2>
+    <div class="grafico-contenedor">
+      <img src="Top 5 comunas cadenas Papa Jhons, Dominos, Melt.png" alt="Gráfico-Top-5-comunas" class="Gráfico-Top-5-comunas">
+    </div>
+    <p class="texto-grafico">
+      Dentro de la Región Metropolitana, hay 5 comunas que destacan en cuanto a cantidad de locales de pizzas que se pueden encontrar en sus territorios. Según datos de Gregario, estas comunas son; Santiago, Maipú, Puente Alto, Las Condes y La Florida. 5 comunas que comparten un gran flujo de personas diario, una amplia geografía y, al parecer, también una preferencia por este alimento.  
+      <br> <br />
+La comuna de Santiago es la que posee más locales de pizzas; si bien son 28 en total, en ella se encuentran 9 de las 10 cadenas de pizzas estudiadas. Le sigue la comuna de Maipú, con una población de aproximadamente 587.000 personas, en cuyo territorio se encuentran 7 cadenas de pizzas.
+<br> <br />
+Las comunas del top 5 no solo destacan por su alto consumo de pizzas, sino también por las historias detrás de cada una. 
+      Desde las pizzerías tradicionales hasta los negocios familiares que han crecido junto con sus barrios, 
+      estas comunas nos muestran cómo la pizza se ha convertido en parte de su identidad cultural. 
+      Descubre cómo la creatividad y el amor por este plato han transformado su gastronomía local.
+
+    </p>
+  </section>
+
+ <!-- Nueva sección: Historias Top 5 comunas -->
+<section class="seccion-historias">
+    <h2>Papa John´s: el mejor evaluado</h2>
+    <p class="texto-historias">
+      Fue en el año 2010 cuando una de las cadenas de pizzerías más importantes de Estados Unidos abría su primer local en territorio chileno. El plan inicial de esta megaempresa contemplaba la apertura de 25 locales en 3 años y de esta manera a 2015 llegar con 40 locales. Hoy en día Papa John´s tiene 166 locales distribuidos a lo largo de Chile. Es una pizzería transversal que ha sabido adaptarse a los tiempos y a las dificultades del contexto, por ejemplo, la pandemia por COVID-19. 
+      <br> <br />
+En el gráfico se evidencia los ratings de esta cadena de pizzería, es decir, la puntuación, nota o puntaje de esta. Como se aprecia en la visualización, tiene una gran aprobación superando en la mayoría de las comunas los 4.0 puntos y siendo como excepción sólo 3 de las más de 30 comunas que cuentan con al menos un local de Papa John´s.
+      <br> <br />
+      <img src="papa johns rating.png" alt="Rating-PapaJohn´s" class="Rating-PapaJohn´s">
+    </p>
+
+    <h2>Domino´s Pizza: el peor evaluado</h2>
+    <p class="texto-historias">
+      Domino's Pizza es una de las cadenas con mayor presencia en Chile, destacándose por contar con una amplia cantidad de locales en diversas zonas del país. De hecho, se posiciona como una de las marcas con los números más altos en cuanto a cantidad de reseñas. A la fecha, Domino’s Pizza ha recibido un total de 138.160 reseñas, según la base de datos del mercado de pizzas de Gregario, lo que la coloca en el cuarto lugar en cuanto a volumen de opiniones en plataformas de pedidos de comida. Las cadenas con más reseñas son Papa John’s con 814.036, Melt con 409.784 y Little Caesars con 287.788.
+      <br> <br />
+      Sin embargo, a pesar de estos números altos en cuanto a la cantidad de reseñas, esto no necesariamente refleja la calidad general percibida de Domino’s Pizza en el mercado chileno. De acuerdo con la misma base de datos, la cadena ocupa el último lugar en el ranking de ratings entre las grandes marcas de pizza, con una calificación de 3,7, una cifra significativamente baja en comparación con sus competidores. Esta baja puntuación es respaldada por una serie de comentarios negativos en plataformas populares de reseñas de comida como Rappi, Uber Eats y Tripadvisor, donde los consumidores destacan que el principal factor detrás de este puntaje bajo es la insatisfacción con la calidad del producto recibido. Los clientes señalan que, en muchos casos, la pizza no cumple con sus expectativas en términos de sabor y presentación, lo que impacta directamente en la percepción general de la marca.
+      <br> <br />
+      <img src="dominos rating.png" alt="Rating-dominos" class="Rating-dominos">
+    </p>
+
+    <h2>Melt Pizza: el apogeo de las nuevas pizzerías</h2>
+    <p class="texto-historias">
+      Melt Pizzas ha logrado un importante crecimiento en popularidad últimamente, consolidándose como una de las marcas más reconocidas en el mercado de pizzas en Chile. Se ubica en el segundo lugar a nivel nacional con un rating de 4,5. 
+      <br> <br />
+      En cuanto a preferencias, refleja la calidad de sus productos y un enfoque constante en mejorar la experiencia del cliente. Sin embargo, a pesar de su éxito y las altas calificaciones obtenidas, Melt Pizzas enfrenta la limitación de no contar con una red de locales físicos tan amplia como la de otras cadenas más establecidas, lo que restringe su presencia en ciertas zonas. Aun así, su creciente popularidad indica que su modelo de negocio, basado en la calidad y la satisfacción del cliente, tiene un fuerte potencial para expandirse y competir en un nivel más amplio en el futuro cercano.
+      <br> <br />
+      <img src="melt rating.png" alt="Rating-melt" class="Rating-melt">
+    </p>
+  </section>
+  
+   <!-- Nueva sección: Explicación -->
+<section class="seccion-historias">
+    <h2>Explicación</h2>
+    <p class="texto-historias">
+      Las comunas del top 5 no solo destacan por su alto consumo de pizzas, sino también por las historias detrás de cada una. 
+      Desde las pizzerías tradicionales hasta los negocios familiares que han crecido junto con sus barrios, 
+      estas comunas nos muestran cómo la pizza se ha convertido en parte de su identidad cultural. 
+      Descubre cómo la creatividad y el amor por este plato han transformado su gastronomía local.
+    </p>
+  </section>
+  
+  <script src="js.js"></script>
 </body>
+
+</html>
+
+
+

@@ -1,76 +1,611 @@
 /* Estilo general */
 body {
+    margin: 0 auto;
+    padding: 60 px 20 px;
+    box-sizing: border-box;
+    background: #fbe7c6; /* Fondo claro */
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    color: #333;
-}
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+  }
+  
+  /* Primera sección: Pizza giratoria */
+  .contenedor-pizza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: #fbe7c6; /* Fondo claro */
+    position: relative;
+  }
 
-/* Encabezado */
-header {
-    background: linear-gradient(90deg, #4a90e2, #005f73);
-    color: white;
+  .pizza {
+    animation: girar 10s linear infinite; /* Rotación infinita */
+    width: 80vmin; /* Asegura que la pizza sea proporcional a la pantalla */
+    height: 80vmin;
+  }
+  
+  /* Segunda sección */
+  .seccion-contexto {
+    width: 100%;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 40px 40px; /* Espaciado mayor para texto */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Separación visual entre secciones */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenido-seccion {
+    max-width: 800px; /* Limitar el ancho del contenido */
     text-align: center;
-    padding: 20px 0;
+  }
+
+  .titulo-seccion {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000; /* Texto oscuro */
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 1em;
+    color: #d62828;
+    font-weight:bold;
+}
+  
+  .texto-autores {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #000000; /* Texto gris */
+  }
+  
+  .texto-introducción {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align:justify;
+    color: #000000; /* Texto oscuro */
+  }
+
+  /* Animación de la pizza */
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Porciones */
+  .porcion {
+    fill: #f4a261;
+    stroke: #f1c27d;
+    stroke-width: 3;
+    opacity: 0; /* Oculto inicialmente */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(0.8);
+  }
+  
+/* Masa de la pizza */
+.masa {
+  fill: #f7d9a7; /* Color más oscuro que el fondo, simula masa horneada */
+  stroke: #e0a96d; /* Borde de la masa */
+  stroke-width: 5;
 }
 
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-}
+  .porcion.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Pepperonis */
+  .pepperoni {
+    fill: #d62828;
+    opacity: 0; /* Ocultos inicialmente */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .pepperoni.visible {
+    opacity: 1;
+  }
+  
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
 
-header h1 {
-    margin: 10px 0;
-    font-size: 2.5em;
-}
+   /* Grid de la tercera sección */
+.seccion-grid {
+    width: 100%;
+    min-height: 100vh; /* Ocupar toda la altura de la pantalla */
+    background-color: #f8f8f8; /* Fondo suave */
+    padding: 40px 40px; /* Espaciado para el contenido */
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    gap: 20px;
+  }
+  
+  .grafico1 {
+    padding: 20px 20px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+  }
 
-/* Contenedor principal */
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
+  .grafico2 {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+  }
 
-section {
+  .grafico3 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-column-gap: 20px; /* Espacio entre columnas */
+    grid-row-gap: 20px; /* Espacio entre filas */
+    max-width: 1200px; /* Limitar el ancho máximo del grid */
+    width: 100%; /* Asegurar que el grid ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+  
+  .cuadro-texto {
+    background-color: #ffffff; /* Fondo blanco para los cuadros */
     padding: 20px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column; /* Organiza los hijos en columna */
+    justify-content: space-between; /* Asegura que el contenido dentro de los cuadros se distribuya */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    height: 100%; /* Asegúrate de que el contenedor ocupe todo el espacio necesario */
+  }
+  
+  .cuadro-texto h2 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cuadro-texto-central {
+    background-color: #ffffff; /* Fondo blanco para los cuadros */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    flex-direction: column; /* Organiza los hijos en columna */
+    justify-self: center; /* Centrado horizontal */
+    align-self: center; /* Centrado vertical */
+    text-align: center; /* Centra el texto */
+    height: 100%; /* Asegúrate de que el contenedor ocupe todo el espacio necesario */
+    grid-column: 1 / -1; /* Ocupa ambas columnas */
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .texto-explicacióngraficos {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align:justify;
+    color: #000000; /* Texto oscuro */
+}
+    
+
+  
+  /* Sección: La preferencia de los chilenos */
+.seccion-preferencia {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ocupar toda la altura de la pantalla */
+    padding: 40px 40px; /* Espaciado para el contenido */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    gap: 20px;
+  }
+  
+  .contenido-preferencia {
+    max-width: 800px;
+    text-align: center; /* Centra el texto */
+  }
+  
+  .titulo-preferencia {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000; /* Texto oscuro */
+    margin-bottom: 20px;
+  }
+  
+  .texto-preferencia {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000; /* Texto gris */
+  }
+
+  .podio {
+    width: 80%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+
+  /* Sección: Texto a la izquierda e imagen a la derecha */
+.seccion-texto-imagen {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+  }
+  
+  .contenedor-texto-imagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .texto-lado-izquierdo {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo gris claro para el texto */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-izquierdo h2 {
+    font-size: 24px;
+    color: #333; /* Título oscuro */
+    margin-bottom: 10px;
+  }
+  
+  .texto-lado-izquierdo p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+  }
+  
+  .imagen-lado-derecho img {
+    width: 150%; /* Imagen responsiva */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  /* Sección: Imagen a la izquierda y texto a la derecha */
+.seccion-imagen-texto {
+    padding: 20px 20px;
+    background-color: #f8f8f8; /* Fondo gris muy claro */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenedor-imagen-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .imagen-lado-izquierdo img {
+    width: 100%; /* Imagen responsiva */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-derecho {
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el texto */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-derecho h2 {
+    font-size: 24px;
+    color: #333; /* Título oscuro */
+    margin-bottom: 10px;
+  }
+  
+  .texto-lado-derecho p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+  }
+
+  /* Sección: Imagen a la izquierda y texto a la derecha */
+.seccion-imagen-texto {
+    padding: 60px 20px;
+    background-color: #f8f8f8; /* Fondo gris muy claro */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenedor-imagen-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .imagen-lado-izquierdo img {
+    width: 100%; /* Imagen responsiva */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-derecho {
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el texto */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-derecho h2 {
+    font-size: 24px;
+    color: #333; /* Título oscuro */
+    margin-bottom: 10px;
+  }
+  
+  .texto-lado-derecho p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+  }
+
+  /* Sección: Texto a la izquierda e imagen a la derecha */
+.seccion-texto-imagen {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenedor-texto-imagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .texto-lado-izquierdo {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo gris claro para el texto */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .texto-lado-izquierdo h2 {
+    font-size: 24px;
+    color: #333; /* Título oscuro */
+    margin-bottom: 10px;
+  }
+  
+  .texto-lado-izquierdo p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+  }
+  
+  .imagen-lado-derecho img {
+    width: 70%; /* Imagen responsiva */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  /* Estilo para la sección Los protagonistas */
+.seccion-protagonistas {
+    padding: 60px 20px;
+    background-color: #f2f2f2; /* Fondo gris claro */
+    text-align: center;
+  }
+
+  .Papa-John´s {
+    width: 30%;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+  .dominos-pizza {
+    width: 30%;
+    padding: 20px 20px;
+    background-color: #f8f8f8; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+  .melt {
+    width: 20%;
+    padding: -20px 20px;
+    background-color: #f8f8f8; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+
+  
+  .seccion-protagonistas h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333; /* Color oscuro para el título */
+  }
+  
+  .protagonista {
+    margin-bottom: 40px; /* Espaciado entre los bloques */
+  }
+  
+  .protagonista img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaciado entre la imagen y el texto */
+  }
+  
+  .protagonista p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    margin: 0 auto; /* Centra el texto */
+  }
+
+  .Gráfico-Top-5-comunas {
+    width: 80%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+  
+  /* Estilo para la sección Top 5 comunas */
+.seccion-top5 {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    text-align: center;
+  }
+  
+  .seccion-top5 h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333; /* Título en color oscuro */
+  }
+  
+  .grafico-contenedor {
+    margin: 0 auto 30px; /* Centra el gráfico y añade espaciado inferior */
+    max-width: 800px; /* Limita el ancho máximo del gráfico */
+  }
+  
+  .grafico {
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  .texto-grafico {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Texto gris */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el texto */
+  }
+
+  /* Estilo para la sección Historias Top 5 comunas */
+.seccion-historias {
+    padding: 60px 20px;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+  .seccion-historias h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333; /* Título en color oscuro */
+  }
+  
+  .texto-historias {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* Texto gris */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el texto */
+  }
+  
+    /* Estilo para la sección Historias Top 5 comunas */
+.seccion-historias {
+    padding: 60px 20px;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+  .seccion-historias h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333; /* Título en color oscuro */
+  }
+  
+  .texto-historias {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* Texto gris */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el texto */
+  }
+
+  /* Asegura que las secciones inferiores también ocupen todo el ancho */
+.seccion-historias,
+.seccion-top5 {
+  width: 100vw; /* Ancho completo de la pantalla */
+  background-color: #f9f9f9;
 }
 
-section:last-child {
-    border-bottom: none;
+.seccion-historias p,
+.seccion-top5 p {
+   max-width: 800px; /* Limita el ancho del texto */
+   margin: 0 auto;
 }
 
-h2 {
-    margin-top: 0;
-    color: #005f73;
-    border-left: 5px solid #4a90e2;
-    padding-left: 10px;
+.seccion-protagonistas {
+  width: 100vw;
+  background-color: #ffffff;
 }
 
-/* Listas */
-ul {
-    margin: 10px 0;
-    padding-left: 20px;
+.imagen-protagonistas {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-li {
-    margin-bottom: 5px;
-}
+.Rating-PapaJohn´s {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+  .Papa-John´s-regiones {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
 
-/* Enlaces */
-a {
-    color: #005f73;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+  .Rating-dominos {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+  
+  .Rating-melt {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; /* Centrar los gráficos */
+    margin-bottom: 20px; /* Espaciado adicional debajo del grid */
+  }
+  

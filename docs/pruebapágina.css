@@ -1,0 +1,69 @@
+/* Esto asegura que todo el contenido de la página se centre */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .pizza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .porcion {
+    width: 50px;
+    height: 50px;
+    background-color: #f7a10d;
+    margin: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .pepperoni {
+    width: 20px;
+    height: 20px;
+    background-color: #b73434;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+  }
+  
+  .pepperoni:nth-child(5) {
+    top: 20px;
+    left: 10px;
+  }
+  
+  .pepperoni:nth-child(6) {
+    top: -20px;
+    left: 40px;
+  }
+  
+  .pepperoni:nth-child(7) {
+    top: 40px;
+    left: 70px;
+  }
+  
+  .pepperoni:nth-child(8) {
+    top: 80px;
+    left: 120px;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
